@@ -15,20 +15,53 @@ body {
 
 .sidebar {
     background-color:black;
+    color:white;
     height:100%;
     width:150px;
     float:left;
     min-height:400px;
 }
 
+.logo-mobile {
+    display:none;
+}
+
+.logo img {
+    width:100%;
+}
+
 .sidebar-top {
-    background-color: blanchedalmond;
     height: calc(100% - 100px);
+    display:flex;
+    flex-direction:column;
+}
+
+.menù-list img {
+    width:30px;
+    vertical-align: middle;
+    opacity:0.5;
+}
+
+.menù-list a {
+    text-decoration: none;
+    color:#a3a3a3;
+}
+
+.menù-list .border-active {
+    border-left:2px solid #94dd25;
+}
+
+.menù-list li:hover img, .menù-list li:hover a {
+    color:white;
+    opacity:1;
+}
+
+.playlists {
+    overflow-y: auto;
 }
 
 .sidebar-bottom {
     height:100px;
-    background-color: grey;
 }
 
 
@@ -36,7 +69,6 @@ body {
 
 main {
     height: calc(100% - 100px);
-    background-color:yellow;
 }
 
 main::after {
@@ -50,12 +82,13 @@ main::after {
     width: calc(100% - 150px);
     overflow-y: scroll;
     float:left;
+    background-color:#141922;
 }
 
 .cta {
     position:fixed;
     height:50px;
-    background-color:chartreuse;
+    background-color:#080b12;
     width: calc(100% - 150px);
     top:0px;
     right:0;
@@ -65,12 +98,40 @@ main::after {
     padding-top:70px;
 }
 
+.nav-bar {
+    text-align: center;
+}
+
+.nav-bar li {
+    display:inline-block;
+    margin: 0 8px;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    color:grey;
+    font-size:13px;
+    padding: 4px 0;
+    position:relative;
+}
+
+.nav-bar .nav-item .nav-item-active::after {
+    content:"";
+    height:2px;
+    width:40px;
+    position:absolute;
+    bottom:0;
+    left:50%;
+    background-color: #94dd25;
+    transform:translateX(-50%);
+}
+
 
 /* REGOLE FOOTER--------------------------- */
 
 footer {
     height:100px;
-    background-color: red;
+    background-color: #282828;
     position:relative;
 }
 
@@ -89,6 +150,22 @@ footer {
 
     .cta {
         width: calc(100% - 40px);
+    }
+
+    .logo-full {
+        display:none;
+    }
+
+    .logo-mobile {
+        display:block;
+    }
+
+    .playlist, .playlists {
+        display:none;
+    }
+
+    .menù-list span {
+        display: none;
     }
     
 }
