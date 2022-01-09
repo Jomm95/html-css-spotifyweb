@@ -8,6 +8,7 @@ body {
     height:100vh;
     width:100%;
     font-family: 'Signika Negative', sans-serif;
+    background-color: black;
 }
 
 
@@ -492,6 +493,10 @@ footer .options li {
 
     .cover-list .cover-item {
         width: calc(100% / 2);
+    }
+
+    .sidebar-bottom {
+        display:none;
     }
     
 }
