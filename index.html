@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css" integrity="sha512-6c4nX2tn5KbzeBJo9Ywpa0Gkt+mzCzJBrE1RB6fmpcsoN+b/w/euwIMuQKNyUoU/nToKN3a8SgNOtPrbW12fug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -31,10 +32,13 @@
                 </div>
 
                 <div class="playlist">
-                    <h3>Playlist</h3>
-                    <a class="add-playlist-link" href="#">
-                        <span class="add-playlist">Crea Playlist</span>
-                    </a>
+                    <h3>PLAYLIST</h3>
+                        <div class="add-playlist">
+                            <a href="#">
+                                <i class="fas fa-plus-square"></i>
+                                <span>Crea Playlist</span>
+                            </a>
+                        </div>
                 </div>
 
                 <ul class="playlists">
@@ -57,6 +61,21 @@
 
             </div>
             <div class="sidebar-bottom">
+                <div class="app">
+                    <a href="#">
+                        <img src="img/download.svg">
+                        <span class="app-text">Installa app</span>
+                    </a>
+                </div>
+
+                <div class="profile">
+                    <a href="#">
+                        <img src="img/profile.svg">
+                        <span class="profile-text">John Doe</span>
+                    </a>
+                </div>
+
+
 
             </div>
 
@@ -65,7 +84,7 @@
         <div class="main-container">
 
             <div class="cta">
-
+                <a href="#" class="cta-btn-upgrade">EFFETTUA L'UPGRADE</a>
             </div>
 
             <div class="main-content">
@@ -81,6 +100,180 @@
                     </ul>
                 </nav>
 
+                <!-- PRIMA SEZIONE--------------- -->
+                <section id="recent-played">
+                    <h2>Recently Played</h2>
+
+                    <ul class="cover-list">
+
+                        <li class="cover-item">
+                            <div class="cover-container">
+                                <img src="img/metal_lifting.jpg" alt="metal">
+
+                                <div class="cover-overlay">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+
+                            <div class="cover-text">
+                                <h3>Heavy Metal</h3>
+                                <p>Subtitle</p>
+                            </div>
+                        </li>
+
+                        <li class="cover-item">
+                            <div class="cover-container">
+                                <img src="img/stranger.jpeg" alt="stranger things">
+
+                                <div class="cover-overlay">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+
+                            <div class="cover-text">
+                                <h3>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h3>
+                                <p>Kyle Dixon & Micheal Stein</p>
+                            </div>
+                        </li>
+
+                        <li class="cover-item">
+                            <div class="cover-container">
+                                <img src="img/aquietplace.jpeg" alt="quite place">
+
+                                <div class="cover-overlay">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+
+                            <div class="cover-text">
+                                <h3>A quiet place</h3>
+                                <p>Subtitle</p>
+                            </div>
+                        </li>
+
+                        <li class="cover-item">
+                            <div class="cover-container">
+                                <img src="img/split.jpeg" alt="split">
+
+                                <div class="cover-overlay">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+
+                            <div class="cover-text">
+                                <h3>Split</h3>
+                                <p>Subtitle</p>
+                            </div>
+                        </li>
+
+                        <li class="cover-item">
+                            <div class="cover-container">
+                                <img src="img/cure.jpeg" alt="cure for wellness">
+
+                                <div class="cover-overlay">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+
+                            <div class="cover-text">
+                                <h3>A cure for wellness</h3>
+                                <p>Subtitle</p>
+                            </div>
+                        </li>
+
+                        <li class="cover-item">
+                            <div class="cover-container">
+                                <img src="img/sinister.jpeg" alt="sinister">
+
+                                <div class="cover-overlay">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+
+                            <div class="cover-text">
+                                <h3>Sinister</h3>
+                                <p>Subtitle</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- SECONDA SEZIONE---------------- -->
+                <section id="for-user">
+                    
+                    <h2>Creato per John Doe</h2>
+                    <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+
+                    <ul class="cover-list">
+
+                        <li class="cover-item">
+                            <div class="cover-container">
+                                <img src="img/radar.jpeg" alt="latest">
+
+                                <div class="cover-overlay">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+
+                            <div class="cover-text">
+                                <h3>Release Radar</h3>
+                            </div>
+                        </li>
+                        
+                        <li class="cover-item">
+                                <div class="cover-container">
+                                    <img src="img/mixdaily.jpeg" alt="dailymix">
+    
+                                    <div class="cover-overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+    
+                                <div class="cover-text">
+                                    <h3>Daily Mix 1</h3>
+                                </div>
+                            </li>
+
+                </section>
+
+                <!-- TERZA SEZIONE--------------- -->
+                <section id="popular">
+
+                    <h2>Artisti più popolari</h2>
+                    <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+
+                    <ul class="cover-list">
+
+                        <li class="cover-item">
+                            <div class="cover-container">
+                                <img src="img/youg.jpeg" alt="youg">
+
+                                <div class="cover-overlay">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+
+                            <div class="cover-text">
+                                <h3>Lana Del Ray</h3>
+                            </div>
+                        </li>
+
+                        <li class="cover-item">
+                                <div class="cover-container">
+                                    <img src="img/einaudi.jpeg" alt="Einaudi">
+    
+                                    <div class="cover-overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+    
+                                <div class="cover-text">
+                                    <h3>Title</h3>
+                                </div>
+                            </li>
+
+                </section>
+
             </div>
 
         </div>
@@ -89,6 +282,66 @@
 
 
     <footer>
+
+        <!-- SINISTRA -------------------->
+        <div class="album">
+            <div class="cover">
+                <img src="img/sinister.jpeg">
+            </div>
+            <div class="title">
+                <h4><a href="#">Sinister</a></h4>
+                <p><a href="#">Brano</a></p>
+            </div>
+            <div class="icons">
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#"><i class="far fa-folder"></i></a>
+            </div>
+        </div>
+
+        <!-- CENTRO------------------- -->
+        <div class="controls">
+                    <!--    parte superiore -->
+            <ul class="menù-list">
+                <li><i class="fas fa-random"></i></li>
+                <li><i class="fas fa-step-backward"></i></li>
+                <li class="play-icon"><i class="far fa-play-circle"></i></li>
+                <li><i class="fas fa-step-forward"></i></li>
+                <li><i class="fas fa-redo-alt"></i></li>
+            </ul>
+                <!--    parte inferiore -->
+            <div class="time">
+                <div class="current-time">0:25</div>
+
+                <div class="bar-time">
+                    <div class="now-time">
+                        <div class="pointer-now-time">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="total-time">4:35</div>
+            </div>
+            
+        </div>
+
+        <!-- DESTRA------------------------- -->
+        <div class="options">
+            <ul>
+                <li><i class="fas fa-list-ul"></i></li>
+                <li><i class="fas fa-desktop"></i></li>
+                <li><i class="fas fa-volume-up"></i></li>
+                <li class="progress-container">
+                    <div class="bar-time">
+                        <div class="now-time">
+                            <div class="pointer-now-time">
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
 
     </footer>

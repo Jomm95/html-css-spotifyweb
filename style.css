@@ -14,12 +14,18 @@ body {
 /* REGOLE SIDEBAR ------------------------- */
 
 .sidebar {
-    background-color:black;
+    /* background-color:black; */
     color:white;
-    height:100%;
+    height:calc(100vh - 100px);
     width:150px;
     float:left;
     min-height:400px;
+}
+
+.sidebar::after {
+    display:table;
+    content:"";
+    clear:both;
 }
 
 .logo-mobile {
@@ -27,24 +33,33 @@ body {
 }
 
 .logo img {
-    width:100%;
+    width:80%;
+    padding:10px;
 }
 
 .sidebar-top {
-    height: calc(100% - 100px);
+    height:calc(100% - 100px);
     display:flex;
     flex-direction:column;
+    background-color: black;
 }
 
+
 .menù-list img {
-    width:30px;
+    width:35px;
     vertical-align: middle;
     opacity:0.5;
+    padding:7px;
 }
 
 .menù-list a {
     text-decoration: none;
     color:#a3a3a3;
+    font-size: 13px;
+}
+
+.menù-list li {
+    list-style: none;
 }
 
 .menù-list .border-active {
@@ -56,13 +71,77 @@ body {
     opacity:1;
 }
 
+.playlist {
+    padding-left:5px;
+}
+
+.playlist i {
+    font-size:28px;
+}
+
+.playlist .span {
+    font-size:16px;
+}
+
+.playlist h3 {
+    font-size:14px;
+    padding: 5px 0;
+}
+
+.playlist a {
+    text-decoration: none;
+    color:grey; 
+}
+
+.playlists li {
+    font-size:12px;
+    padding:10px 0 10px 5px;;
+    color: grey;
+}
+
+
 .playlists {
     overflow-y: auto;
 }
 
 .sidebar-bottom {
     height:100px;
+    background-color: black;
+    padding: 20px 0 10px 10px;
 }
+
+.sidebar-bottom .app img {
+    width:12px;
+}
+
+.sidebar-bottom .app {
+    border-bottom: 1px solid grey;
+    width:80%;
+    padding-bottom:10px;
+    margin-bottom: 7px;
+}
+
+.sidebar-bottom .app a {
+    text-decoration: none;
+    color:grey;
+}
+
+.sidebar-bottom .app-text {
+    font-size:13px;
+}
+
+
+
+.sidebar-bottom .profile img {
+    width:14px;
+    padding-right:4px;
+}
+
+.sidebar-bottom .profile-text {
+    color:white;
+    font-size:14px;
+}
+
 
 
 /* REGOLE MAIN ------------------------ */
@@ -79,6 +158,7 @@ main::after {
 
 .main-container {
     height: 100%;
+
     width: calc(100% - 150px);
     overflow-y: scroll;
     float:left;
@@ -87,15 +167,37 @@ main::after {
 
 .cta {
     position:fixed;
-    height:50px;
+    height:65px;
     background-color:#080b12;
     width: calc(100% - 150px);
     top:0px;
     right:0;
+    text-align: right;
+    padding:20px;
+    z-index: 2;
+    
+}
+
+.cta-btn-upgrade {
+    border: 1px solid white;
+    border-radius: 30px;
+    padding:10px 30px;
+    text-decoration:none;
+    color:white;
+    font-size:10px;
+}
+
+.cta-btn-upgrade:hover {
+    transform:scale(1.5);
 }
 
 .main-content {
-    padding-top:70px;
+    padding-top:90px;
+}
+
+.main-content h2 {
+    color:white;
+    padding:15px 0;
 }
 
 .nav-bar {
@@ -126,14 +228,228 @@ main::after {
     transform:translateX(-50%);
 }
 
+.main-content section {
+    margin:10px 20px;
+}
+
+section > p {
+    color:grey;
+    margin-bottom:14px;
+}
+
+.cover-list {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.cover-list .cover-item {
+    width: calc(100% / 6);
+    padding: 10px 10px 10px 0px;
+    list-style: none;
+    flex-shrink: 0;
+}
+
+.cover-list .cover-container {
+    position:relative;
+    margin-bottom: 10px;
+}
+
+.cover-list .cover-overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+}
+
+.cover-list .cover-overlay i {
+    font-size: 60px;
+    color:white;
+}
+
+.cover-item:hover .cover-overlay {
+    opacity:1;
+    display:flex;
+}
+
+.cover-list .cover-item img {
+    width:100%;
+}
+
+.cover-text h3 {
+    text-align: center;
+    color:white;
+    font-size:18px;
+}
+
+.cover-text p {
+    text-align: center;
+    color:grey;
+    padding-top:13px;
+    font-size:14px;
+}
+
+#popular .cover-container {
+    border-radius: 50%;
+    overflow:hidden;
+}
+
+
 
 /* REGOLE FOOTER--------------------------- */
 
 footer {
     height:100px;
+    width:100vw;
     background-color: #282828;
-    position:relative;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    bottom:0;
+    z-index: 999;
 }
+
+footer .cover img {
+    width:100%;
+}
+
+footer .album {
+    display:flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.album .cover {
+    width:20%;
+    padding-right:10px;
+}
+.album .title {
+    width:50%;
+}
+
+.album a {
+    text-decoration: none;
+}
+
+.title h4 a {
+    color:white;
+}
+
+.title p a {
+    color:grey;
+}
+
+.icons i {
+    color:grey;
+}
+
+
+.album .icons i {
+    padding:5px;
+}
+
+footer .album, footer .options {
+    width:250px;
+}
+
+footer .options .progress-container {
+    width:80%;
+}
+
+footer .controls {
+    width:50%;
+}
+
+footer .controls ul {
+    display:flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+footer .options i {
+    margin:10px;
+}
+
+
+footer .controls li {
+    list-style: none;
+}
+
+.controls .menù-list i {
+    margin:10px;
+    color:white;
+}
+
+.controls .menù-list .play-icon {
+    font-size:28px;
+}
+
+footer .options ul {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .options li {
+    list-style: none;
+    color:white;
+}
+
+.controls .time {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.time .current-time, .time .total-time {
+    width:10%;
+    font-size: 13px;
+    text-align: center;
+    color:white;
+    
+}
+
+.bar-time {
+    width:80%;
+    background-color: grey;
+    height:4px;
+    border-radius: 5px;
+
+}
+
+.bar-time .now-time {
+    width:20%;
+    height:100%;
+    background-color: white;
+    border-radius: 5px;
+    position:relative;
+
+}
+
+.bar-time .pointer-now-time {
+    position:absolute;
+    width:12px;
+    height:12px;
+    background-color: white;
+    border-radius: 50%;
+    right:0;
+    transform: translateY(-30%);
+    display:none;
+}
+
+.bar-time:hover .pointer-now-time {
+    display:block;
+}
+
+.bar-time:hover .now-time {
+    background-color: green;
+}
+
 
 
 /* MEDIA QUERY */
@@ -156,8 +472,14 @@ footer {
         display:none;
     }
 
+    .logo img {
+        width:100%;
+        padding:8px;
+    }
+
     .logo-mobile {
         display:block;
+        width:100%;
     }
 
     .playlist, .playlists {
@@ -167,5 +489,18 @@ footer {
     .menù-list span {
         display: none;
     }
+
+    .cover-list .cover-item {
+        width: calc(100% / 2);
+    }
     
+}
+
+
+@media all and (min-width:600px) and (max-width:1200px) {
+
+    .cover-list .cover-item {
+        width: calc(100% / 4);
+    }
+
 }
